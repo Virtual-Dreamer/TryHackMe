@@ -1,0 +1,29 @@
+Allexus Constantino | 06/03/2020
+
+-----------------
+TryHackMe:WebDav|
+-----------------
+
+Task 1: Dav
+
+A) User.txt
+
+Answer:
+
+B) Root.txt
+
+Answer:
+
+-----------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan
+2) Visited the webpage. Checked the source code.
+3) Ran gobuster. Found:
+
+/webdav
+
+4) Used Google to look for webdav default credentials
+5) Downloaded passwd.dav
+6) Uploaded a reverse shell to /webdav using cURL

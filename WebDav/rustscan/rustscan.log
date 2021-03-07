@@ -1,0 +1,15 @@
+# Nmap 7.91 scan initiated Sat Mar  6 16:23:33 2021 as: nmap -vvv -p 80 -sC -sV -A -oN rustscan.log 10.10.223.121
+Nmap scan report for 10.10.223.121
+Host is up, received syn-ack (0.25s latency).
+Scanned at 2021-03-06 16:23:33 PST for 17s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar  6 16:23:50 2021 -- 1 IP address (1 host up) scanned in 17.76 seconds
