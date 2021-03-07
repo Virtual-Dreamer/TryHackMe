@@ -1,0 +1,39 @@
+Allexus Constantino | 03/03/2021
+
+---------------------
+TryHackMe:Brooklyn99|
+---------------------
+
+Task 1: User Flag
+
+Answer: ee11cbb19052e40b07aac0ca060c23ee
+
+-----------------------
+
+Task 2: Root Flag
+
+Answer: 63a9f0ea7bb98050796b649e85481845
+
+
+-----------------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan
+2) Viewed the webpage. Checked the source code. Found comment:
+
+<!-- Have you ever heard of steganography? -->
+
+3) Logged in to FTP anonymously. Downloaded note_to_jake.txt
+4) Used stegseek on the image. Found credentials:
+
+Holts Password:
+fluffydog12@ninenine
+
+5) Logged in to SSH using above credentials
+6) Read user.txt for user flag
+7) Ran the command sudo -l to see what commands we can run as root.
+In this case we can run nano (text editor) as root. Therefore we can
+read the root.txt file by using the command:
+
+sudo nano /root/root.txt
