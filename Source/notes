@@ -1,0 +1,26 @@
+Allexus Constantino | 05/03/2021
+
+-----------------
+TryHackMe:Source|
+-----------------
+
+Task 1: Embark
+
+A) user.txt
+
+Answer: THM{SUPPLY_CHAIN_COMPROMISE}
+
+B) root.txt
+
+Answer: THM{UPDATE_YOUR_INSTALL}
+
+
+
+-------------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan 
+2) Visited the webpage on port 10000
+3) Used Google to search for publicly available webmin exploits
+4) Used Metasploit module for the exploit (Pull #12219 on GitHub)
