@@ -1,0 +1,39 @@
+Allexus Constantino | 07/03/2021
+
+------------------
+TryHackMe:Library|
+------------------
+
+Task 1: Library
+
+A) User.txt
+
+Answer: 6d488cbb3f111d135722c33cb635f4ec
+
+B) Root.txt
+
+Answer: e8c8c6c256c35515d1d344ee0488c617
+
+---------------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan
+2) Visited the webpage. Found potential username:
+
+meliodas
+
+Checked the source code
+
+3) Brute forced SSH using hydra with username meliodas. Found match:
+
+meliodas:iloveyou1
+
+4) Privesc: Python looks for the imported library firstly in the current directory of where the python file
+is being run. In this case, the library zipfile was imported so I created a new python file with the same name
+which contains python code to spawn a new shell. And because we can run it as root, we should get a shell as root. 
+Then I placed it on the same directory as the original python file and ran the command:
+
+sudo /usr/bin/python /home/meliodas/bak.py
+
+and we got a root shell.
