@@ -1,0 +1,72 @@
+Allexus Constantino | 04/03/2021
+
+---------------------
+TryHackMe:Easy Peasy|
+---------------------
+
+Task 1: Enumeration through Nmap
+
+A) How many ports are open?
+
+Answer: 3
+
+B) What is the version of nginx?
+
+Answer: 1.16.1
+
+C) What is running on the higher port?
+
+Answer: Apache
+
+----------------
+
+Task 2: Compromising the machine
+
+A) Using GoBuster, find flag 1
+
+Answer: 
+
+B) Further enumerate the machine, what is flag 2?
+
+Answer: flag{1m_s3c0nd_fl4g}
+
+C) Crack the hash with easypeasy.txt, what is the flag 3?
+
+Answer: flag{9fdafbd64c47471a8f54cd3fc64cd312}
+
+D) Whay is the hidden directory?
+
+Answer: /n0th1ng3ls3m4tt3r
+
+E) Using the wordlist that provided to you in this task, crack the hash
+What is the password?
+
+Answer: my passwordforthatjob
+
+F) What is the password to login to the machine via SSH?
+
+Answer: iconvertedmypasswordtobinary
+
+G) What is the user flag?
+
+Answer: flag{n0wits33msn0rm4l}
+
+H) What is the root flag?
+
+Answer: flag{63a9f0ea7bb98050796b649e85481845}
+
+
+
+----------------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan
+2) Visited the webpages. Checked for robots.txt and source code
+3) Ran GoBuster on both http services
+4) Downloaded images for steganography
+5) Cracked md5 hashes online
+6) Logged in to SSH and got user.txt
+7) Enumerated the machine for privesc. Vulnerable cronjob running as root
+8) Since the cronjob is ours, I edited it and put a reverse shell on it and
+waited for it to run. You should have a shell running as root.
