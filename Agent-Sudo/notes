@@ -1,0 +1,28 @@
+Allexus Constantino | 07/03/2021
+
+---------------------
+TryHackMe:Agent-Sudo|
+---------------------
+
+Task 1: 
+
+
+--------------------
+
+Steps I did:
+
+1) Scanned the machine using rustscan
+2) Visited the webpage. Used User-Agent switcher to change user-agent to "C"
+3) Used hydra to brute force FTP with username chris. Found password:
+
+crystal
+
+4) Downloaded the files.
+5) Inspected all images. Used StegSeek and Binwalk to extract files from images. Decoded the hash using zip2john
+6) Logged in to SSH. Downloaded the alien image
+7) Used Google reverse image search with the image
+8) Ran the command: "sudo -l" to see what commands we can run as root
+9) The "!root" indicates that this machine is vulnerable to CVE-2019-14287 sudo bug. The attacker will be able
+to be root with the command:
+
+sudo -u#-1 (command here)

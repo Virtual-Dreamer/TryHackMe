@@ -1,0 +1,4 @@
+[80][http-post-form] host: 10.10.131.27   login: admin   password: xavier
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2021-03-09 19:16:16
+

@@ -1,0 +1,76 @@
+Allexus Constantino | 02/03/2021
+
+------------------
+TryHackMe:Root-Me|
+------------------
+
+Task 1:
+
+A) Deploy the Machine
+
+No answer needed
+
+---------------------
+
+Task 2: Reconnaisance
+
+A) Scan the machine, how many ports are open?
+
+Answer: 2
+
+B) What version of Apache is running?
+
+Answer: 2.4.29
+
+C) What service is running on port 22?
+
+Answer: ssh
+
+D) Find directories on the web server using Gobuster tool
+
+No answer needed
+
+E) What is the hidden directory?
+
+Answer: /panel/
+
+---------------------
+
+Task 3: 
+
+A) user.txt
+
+Answer: THM{y0u_g0t_a_sh3ll}
+
+-----------------------
+
+Task 4:
+
+A) Search for files with SUID permission, which file is weird?
+
+Answer: /usr/bin/python
+
+B) Find a form to escalate your privileges.
+
+No answer needed
+
+C) root.txt
+
+Answer: THM{pr1v1l3g3_3sc4l4t10n}
+
+
+--------------
+
+Steps I did:
+
+1) Scanned the machine using nmap
+2) Visited the webpage.
+3) Ran GoBuster. Found:
+
+/panel
+4) Set up a netcat listener. Upload a phprevese shell and change the extension to phtml
+5) Find SUID files using the command:
+
+find / -perm -u=s 2>/dev/null
+
+6) Use GTFOBins for awesome privilege escalation tricks

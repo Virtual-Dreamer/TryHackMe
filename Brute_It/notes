@@ -1,0 +1,104 @@
+Allexus Constantino | 09/03/2021
+
+-------------------
+TryHackMe:Brute It|
+-------------------
+
+Task 1: About this box
+
+No answer needed
+
+----------------------------
+
+Task 2: Reconnaissance
+
+A) Search for open ports using nmap.
+How many ports are open?
+
+Answer: 2
+
+B) What version of SSH is running?
+
+Answer: OpenSSH 7.6p1
+
+C) What version of Apache is running?
+
+Answer: 2.4.29
+
+D) Which Linux distribution is running?
+
+Answer: ubuntu
+
+E) Search for hidden directories on web server.
+What is the hidden directory?
+
+Answer: /admin
+
+-------------------
+
+Task 3: Getting a shell
+
+A) What is the user:password of the admin panel?
+
+Answer: admin:xavier
+
+B) Crack the RSA key you found.
+What is John's RSA Private Key passphrase?
+
+Answer: rockinroll
+
+C) user.txt
+
+Answer: THM{a_password_is_not_a_barrier}
+
+D) Web flag
+
+Answer: THM{brut3_f0rce_is_e4sy}
+
+----------------------------------
+
+Task 4: Privilege Escalation
+
+A) Find a form to escalate your privileges.
+What is the root's password? 
+
+Answer: football
+
+B) root.txt
+
+Answer: THM{pr1v1l3g3_3sc4l4t10n}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+
+Steps I did:
+
+1) Scanned the maching using rustscan
+2) Visited the webpage. Checked the source code of default apache page. 
+Ran GoBuster and found:
+
+/admin
+
+3) Visited /admin. Checked the source code. Found comment:
+
+
+<!-- Hey john, if you do not remember, the username is admin -->
+
+4) Used Hydra to bruteforce the login form with the username admin and rockyou.txt password wordlist
+5) Downloaded the private rsa key
+6) Used ssh2john to crack the key
+7) Logged in to SSH and read user.txt
+8) Ran sudo -l command to see what commands we can run as root
+9) Copied the passwd and shadow file. Used Unshadow and cracked the hashes
