@@ -1,0 +1,44 @@
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.39.55/d1r3c70ry_center/
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirb/common.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Extensions:     bak,php,txt,html,rar,zip,log
+[+] Timeout:        10s
+===============================================================
+2021/03/15 14:44:07 Starting gobuster
+===============================================================
+/.hta (Status: 403)
+/.hta.txt (Status: 403)
+/.hta.html (Status: 403)
+/.hta.rar (Status: 403)
+/.hta.zip (Status: 403)
+/.hta.log (Status: 403)
+/.hta.bak (Status: 403)
+/.hta.php (Status: 403)
+/.htaccess (Status: 403)
+/.htaccess.zip (Status: 403)
+/.htaccess.log (Status: 403)
+/.htaccess.bak (Status: 403)
+/.htaccess.php (Status: 403)
+/.htaccess.txt (Status: 403)
+/.htaccess.html (Status: 403)
+/.htaccess.rar (Status: 403)
+/.htpasswd (Status: 403)
+/.htpasswd.bak (Status: 403)
+/.htpasswd.php (Status: 403)
+/.htpasswd.txt (Status: 403)
+/.htpasswd.html (Status: 403)
+/.htpasswd.rar (Status: 403)
+/.htpasswd.zip (Status: 403)
+/.htpasswd.log (Status: 403)
+/claim (Status: 301)
+/index.html (Status: 200)
+/index.html (Status: 200)
+===============================================================
+2021/03/15 15:02:27 Finished
+===============================================================
